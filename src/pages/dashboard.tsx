@@ -29,7 +29,7 @@ const options = {
     enabled: true,
   },
   xaxis: {
-    type: 'datetime',
+    type: "datetime",
     axisBorder: {
       color: theme.colors.gray[600],
     },
@@ -37,20 +37,20 @@ const options = {
       color: theme.colors.gray[600],
     },
     categories: [
-      '2021,05-03T00:00:00.000Z',
-      '2021,05-04T00:00:00.000Z',
-      '2021,05-05T00:00:00.000Z',
-      '2021,05-06T00:00:00.000Z',
-      '2021,05-07T00:00:00.000Z',
-      '2021,05-08T00:00:00.000Z',
-      '2021,05-09T00:00:00.000Z',
+      "2021-03-18T00:00:00.000Z",
+      "2021-03-19T00:00:00.000Z",
+      "2021-03-20T00:00:00.000Z",
+      "2021-03-21T00:00:00.000Z",
+      "2021-03-22T00:00:00.000Z",
+      "2021-03-23T00:00:00.000Z",
+      "2021-03-24T00:00:00.000Z",
     ],
   },
   fill: {
     opacity: 0.3,
-    type: 'gradient',
+    type: "gradient",
     gradient: {
-      shade: 'dark',
+      shade: "dark",
       opacityFrom: 0.7,
       opacityTo: 0.3,
     },
@@ -75,15 +75,16 @@ export default function Dashboard() {
         <Sidebar />
 
         <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start">
-          <Box p={['6', '8']} bg="gray.800" borderRadius={8} pb="4">
-            <Text fontSize="lg" mb="4">
-              Chance de eu ir na sua casa amanhã
+          <Box p="8" bg="gray.800" borderRadius={8}>
+            <Text fontSize="large" mb="4">
+              Inscritos da Semana
             </Text>
             <Chart options={options} series={series} type="area" height={160} />
           </Box>
-          <Box p={['6', '8']} bg="gray.800" borderRadius={8} pb="4">
-            <Text fontSize="lg" mb="4">
-              Chance de eu transar com vc amanhã
+
+          <Box p="8" bg="gray.800" borderRadius={8}>
+            <Text fontSize="large" mb="4">
+              Taxa de abertura
             </Text>
             <Chart options={options} series={series1} type="area" height={160} />
           </Box>
