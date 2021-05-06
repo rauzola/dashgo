@@ -26,7 +26,7 @@ const options = {
     enabled: false,
   },
   tooltip: {
-    enabled: false,
+    enabled: true,
   },
   xaxis: {
     type: 'datetime',
@@ -37,13 +37,13 @@ const options = {
       color: theme.colors.gray[600],
     },
     categories: [
-      '2021,03-18T00:00:00.000Z',
-      '2021,03-19T00:00:00.000Z',
-      '2021,03-20T00:00:00.000Z',
-      '2021,03-21T00:00:00.000Z',
-      '2021,03-22T00:00:00.000Z',
-      '2021,03-23T00:00:00.000Z',
-      '2021,03-24T00:00:00.000Z',
+      '2021,05-03T00:00:00.000Z',
+      '2021,05-04T00:00:00.000Z',
+      '2021,05-05T00:00:00.000Z',
+      '2021,05-06T00:00:00.000Z',
+      '2021,05-07T00:00:00.000Z',
+      '2021,05-08T00:00:00.000Z',
+      '2021,05-09T00:00:00.000Z',
     ],
   },
   fill: {
@@ -57,8 +57,8 @@ const options = {
   },
 };
 
-const series = [{ name: 'series1', data: [31, 120, 10, 28, 61, 18, 109] }];
-const series1 = [{ name: 'series1', data: [312, 120, 10, 28, 61, 18, 109] }];
+const series = [{ name: 'series1', data: [11, 12, 10, 28, 120, 180, 190] }];
+const series1 = [{ name: 'series1', data: [312, 120, 60, 30, 15, 10, 5] }];
 
 export default function Dashboard() {
   return (
@@ -77,15 +77,15 @@ export default function Dashboard() {
         <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start">
           <Box p={['6', '8']} bg="gray.800" borderRadius={8} pb="4">
             <Text fontSize="lg" mb="4">
-              Inscritos da semana
+              Chance de eu ir na sua casa amanhã
             </Text>
             <Chart options={options} series={series} type="area" height={160} />
           </Box>
           <Box p={['6', '8']} bg="gray.800" borderRadius={8} pb="4">
             <Text fontSize="lg" mb="4">
-              Taxa de abertura
+              Chance de eu transar com vc amanhã
             </Text>
-            <Chart options={options} series={series} type="area" height={160} />
+            <Chart options={options} series={series1} type="area" height={160} />
           </Box>
         </SimpleGrid>
       </Flex>
