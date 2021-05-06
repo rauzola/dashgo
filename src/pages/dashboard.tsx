@@ -57,8 +57,7 @@ const options = {
   },
 };
 
-const series = [{ name: 'series1', data: [11, 12, 10, 28, 120, 180, 190] }];
-const series1 = [{ name: 'series1', data: [312, 120, 60, 30, 15, 10, 5] }];
+const series = [{ name: "series1", data: [31, 120, 10, 28, 51, 18, 109] }];
 
 export default function Dashboard() {
   return (
@@ -86,7 +85,7 @@ export default function Dashboard() {
             <Text fontSize="large" mb="4">
               Taxa de abertura
             </Text>
-            <Chart options={options} series={series1} type="area" height={160} />
+            <Chart options={options} series={series} type="area" height={160} />
           </Box>
         </SimpleGrid>
       </Flex>
